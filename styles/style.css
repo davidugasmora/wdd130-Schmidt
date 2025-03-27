@@ -2,23 +2,25 @@
 
 body {
     margin: 0 auto;
-    background-color: #396E94;
+    background-color: #041229;
+    font-family: "Macondo", Helvetica, sans-serif;
 }
 
 #content {
     width: 1400px;
     margin: auto;
     background-color: #2E294E;
+    border: 3px #396E94 solid;
+    overflow: hidden;
 
     display: grid;
-    grid-template-rows:4fr 4fr 100px;
+    grid-template-rows:2.35fr 2.35fr 100px;
 }
 
 header {
     grid-row: 1 / 2;
     overflow: hidden;
 
-    font-family: "Quintessential";
     display: grid;
     grid-template-rows: 100px 500px 400px;
 }
@@ -29,12 +31,14 @@ header {
     height: 100px;
     background-color: #011638;
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
 }
 
 .logo_link {
     width: 75px;
     padding-top: 12.5px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .logo {
@@ -43,7 +47,7 @@ header {
 }
 
 nav .link {
-    color: white;
+    color: #C4BBB8;
     text-align: center;
     font-size: larger;
     text-decoration: none;
@@ -65,15 +69,13 @@ nav .link:hover {
     background-position: center;
 }
 
-
-
 #intro_msg {
     grid-row: 3 / 4;
 
-    color: white;
+    color: #C4BBB8;
     background-color: #46324c;
     border: 3px #251b29 solid;
-    margin: 25px;
+    margin-top: 25px;
     margin-left: 80px;
     margin-right: 80px;
 
@@ -89,17 +91,20 @@ nav .link:hover {
     font-size: 40px;
     color: #9055A2;
     text-shadow: 0px 0px 5px #011638;
+    font-family: "Quintessential";
 }
 
 #p1 {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
+    padding: 10px;
     padding-right: 20px;
 }
 
 #p2 {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
+    padding: 10px;
     padding-left: 20px;
 }
 
@@ -108,22 +113,152 @@ main {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1.25fr;
+    grid-template-rows: 350px 575px;
 }
 
 #author_section {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
+
+    color: #C4BBB8;
+    background-color: #46324c;
+    border: 3px #251b29 solid;
+    margin-top: 25px;
+    margin-left: 80px;
+    margin-right: 80px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 1fr 4fr;
+}
+
+#author_img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+
+    width: 250px;
+}
+
+#author_title {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-family: "Quintessential";
+    font-size: 30px;
+    padding-left: 25px;
+    color: #9055A2;
+    text-shadow: 0px 0px 5px #011638;
+}
+
+#author_section p {
+    padding-left: 25px;
+    font-size: large;
 }
 
 .mistborn_card {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    color: #C4BBB8;
+    background-color: #46324c;
+    border: 3px #251b29 solid;
+    margin-top: 25px;
+    margin-left: 150px;
+    margin-right: 150px;
+    border-radius: 25px;
+    place-items: center;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.mistborn_img {
+    grid-row: 1 / 2;
+    
+    width: 250px;
+}
+
+.card_title_sc {
+    grid-row: 2 / 3;
+    
+    font-family: "Quintessential";
+    font-size: 30px;
+    color: #9055A2;
+    text-shadow: 0px 0px 5px #011638;
+}
+
+.mistborn_card p {
+    grid-row: 3 / 4;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+}
+
+.mistborn_card a {
+    grid-row: 4 / 5;
+    background-color: #396E94;
+    border: 3px #251b29 solid;
+    border-radius: 10px;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Quintessential";
+    font-size: large;
+    text-shadow: 0px 0px 1px #011638;
 }
 
 .stormlight_card {
     grid-column: 2 / 3;
     grid-row: 2 / 3 ;
+    color: #C4BBB8;
+    background-color: #46324c;
+    border: 3px #251b29 solid;
+    margin-top: 25px;
+    margin-left: 150px;
+    margin-right: 150px;
+    border-radius: 25px;
+    place-items: center;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.stormlight_img {
+    grid-row: 1 / 2;
+    border: 3px #251b29 solid;
+    border-radius: 250px;
+    margin-top: 40px;
+    margin-bottom: 47px;
+    
+    width: 250px;
+}
+
+.card_title_st {
+    grid-row: 2 / 3;
+
+    font-family: "Quintessential";
+    font-size: 30px;
+    color: #9055A2;
+    text-shadow: 0px 0px 5px #011638;
+}
+
+.stormlight_card p {
+    grid-row: 3 / 4;
+
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+}
+
+.stormlight_card a {
+    grid-row: 4 / 5;
+
+    background-color: #396E94;
+    border: 3px #251b29 solid;
+    border-radius: 10px;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Quintessential";
+    font-size: large;
+    text-shadow: 0px 0px 1px #011638;
 }
 
 footer {
@@ -132,12 +267,22 @@ footer {
     height: 125px;
     background-color: #011638;
     padding: 10px;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    display: flex;
+    justify-content: start;
+}
+
+.logo_link_footer {
+    width: 75px;
+    margin-right: 20px;
+
+}
+
+.logo_footer {
+    width: 100%;
+    border-radius: 50px;
 }
 
 footer p {
-    color: white;
+    color: #C4BBB8;
     text-align: center;
-    padding: 35px 20px;
 }
